@@ -1,0 +1,687 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paytm- Book Flights, Trains & Buses</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="background-animation"></div>
+    
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <span class="paytm-text">Paytm</span>
+            </div>
+            <div class="nav-links">
+                <a href="#" class="nav-item active" data-target="paybills-section">Pay Bills</a>
+                <a href="#" class="nav-item" data-target="recharge-section">Recharge</a>
+                <a href="#" class="nav-item" data-target="travel-section">Travel</a>
+                <a href="#" class="nav-item" data-target="payments-section">Payments & Services</a>
+                <a href="#" class="nav-item" data-target="financial-section">Cards & Insurance</a>
+                <button class="login-btn">Sign In</button>
+            </div>
+        </div>
+    </nav>
+
+    <main class="main-content">
+        <!-- Travel Section -->
+        <section class="app-section" id="travel-section">
+            <div class="hero-section">
+                <h1 class="hero-title">Millions of users book with us everyday.</h1>
+                <p class="hero-subtitle">Book Flights, Trains, and Buses seamlessly.</p>
+                
+                <div class="glass-panel">
+                    <div class="travel-tabs">
+                        <button class="tab-btn active" data-target="flights">
+                            <i class="fa-solid fa-plane"></i> Flights
+                        </button>
+                        <button class="tab-btn" data-target="train">
+                            <i class="fa-solid fa-train"></i> Train
+                        </button>
+                        <button class="tab-btn" data-target="bus">
+                            <i class="fa-solid fa-bus"></i> Bus
+                        </button>
+                        <button class="tab-btn" data-target="intl-train">
+                            <i class="fa-solid fa-train-tram"></i> Intl. Trains
+                        </button>
+                    </div>
+
+                    <div class="tab-content-container">
+                        <!-- Flights Form -->
+                        <div class="tab-content active" id="flights">
+                            <div class="trip-type">
+                                <label class="radio-label">
+                                    <input type="radio" name="flight-type" checked> One Way
+                                </label>
+                                <label class="radio-label">
+                                    <input type="radio" name="flight-type"> Round Trip
+                                </label>
+                            </div>
+                            <div class="search-form">
+                                <div class="input-group">
+                                    <label>From</label>
+                                    <input type="text" placeholder="DEL, Delhi">
+                                </div>
+                                <div class="input-group">
+                                    <label>To</label>
+                                    <input type="text" placeholder="BOM, Mumbai">
+                                </div>
+                                <div class="input-group">
+                                    <label>Departure Date</label>
+                                    <input type="date">
+                                </div>
+                                <div class="input-group">
+                                    <label>Travellers & Class</label>
+                                    <input type="text" placeholder="1 Traveller, Economy" readonly>
+                                </div>
+                            </div>
+                            <button class="search-btn">Search Flights</button>
+                        </div>
+
+                        <!-- Train Form -->
+                        <div class="tab-content" id="train">
+                            <div class="search-form">
+                                <div class="input-group">
+                                    <label>From Station</label>
+                                    <input type="text" placeholder="NDLS, New Delhi">
+                                </div>
+                                <div class="input-group">
+                                    <label>To Station</label>
+                                    <input type="text" placeholder="CSMT, Mumbai">
+                                </div>
+                                <div class="input-group">
+                                    <label>Travel Date</label>
+                                    <input type="date">
+                                </div>
+                                <div class="input-group">
+                                    <label>Class</label>
+                                    <select>
+                                        <option>All Classes</option>
+                                        <option>Sleeper (SL)</option>
+                                        <option>Third AC (3A)</option>
+                                        <option>Second AC (2A)</option>
+                                        <option>First AC (1A)</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <button class="search-btn">Search Trains</button>
+                        </div>
+
+                        <!-- Bus Form -->
+                        <div class="tab-content" id="bus">
+                            <div class="search-form">
+                                <div class="input-group">
+                                    <label>From City</label>
+                                    <input type="text" placeholder="Bangalore">
+                                </div>
+                                <div class="input-group">
+                                    <label>To City</label>
+                                    <input type="text" placeholder="Hyderabad">
+                                </div>
+                                <div class="input-group">
+                                    <label>Date of Journey</label>
+                                    <input type="date">
+                                </div>
+                            </div>
+                            <button class="search-btn">Search Buses</button>
+                        </div>
+
+                        <!-- International Train Form -->
+                        <div class="tab-content" id="intl-train">
+                            <div class="search-form">
+                                <div class="input-group">
+                                    <label>From City (Europe/Japan)</label>
+                                    <input type="text" placeholder="Paris, France">
+                                </div>
+                                <div class="input-group">
+                                    <label>To City</label>
+                                    <input type="text" placeholder="London, UK">
+                                </div>
+                                <div class="input-group">
+                                    <label>Travel Date</label>
+                                    <input type="date">
+                                </div>
+                                <div class="input-group">
+                                    <label>Pass/Ticket Type</label>
+                                    <select>
+                                        <option>Point-to-Point Ticket</option>
+                                        <option>Eurail Pass</option>
+                                        <option>Japan Rail Pass</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <button class="search-btn">Search Intl Trains</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Recharge Section -->
+        <section class="app-section" id="recharge-section">
+            <div class="hero-section">
+                <h1 class="hero-title">Instant Recharges.</h1>
+                <p class="hero-subtitle">Mobile, DTH, FASTag and more.</p>
+                
+                <div class="glass-panel">
+                    <div class="travel-tabs">
+                        <button class="tab-btn active" data-target="mobile-recharge">
+                            <i class="fa-solid fa-mobile-screen"></i> Mobile
+                        </button>
+                        <button class="tab-btn" data-target="dth-recharge">
+                            <i class="fa-solid fa-satellite-dish"></i> DTH
+                        </button>
+                        <button class="tab-btn" data-target="fastag-recharge">
+                            <i class="fa-solid fa-car"></i> FASTag
+                        </button>
+                    </div>
+
+                    <div class="tab-content-container">
+                        <!-- Mobile Recharge -->
+                        <div class="tab-content active" id="mobile-recharge">
+                            <div class="search-form">
+                                <div class="input-group">
+                                    <label>Mobile Number</label>
+                                    <input type="text" placeholder="Enter Mobile Number">
+                                </div>
+                                <div class="input-group">
+                                    <label>Operator</label>
+                                    <select>
+                                        <option>Jio</option>
+                                        <option>Airtel</option>
+                                        <option>VI</option>
+                                        <option>BSNL</option>
+                                    </select>
+                                </div>
+                                <div class="input-group">
+                                    <label>Amount</label>
+                                    <input type="text" placeholder="₹ Amount">
+                                </div>
+                            </div>
+                            <button class="search-btn">Proceed to Recharge</button>
+                        </div>
+                        
+                        <!-- DTH Recharge -->
+                        <div class="tab-content" id="dth-recharge">
+                            <div class="search-form">
+                                <div class="input-group">
+                                    <label>Operator</label>
+                                    <select>
+                                        <option>Tata Play</option>
+                                        <option>Airtel Digital TV</option>
+                                        <option>Dish TV</option>
+                                        <option>Sun Direct</option>
+                                    </select>
+                                </div>
+                                <div class="input-group">
+                                    <label>Subscriber ID</label>
+                                    <input type="text" placeholder="Enter Subscriber ID">
+                                </div>
+                                <div class="input-group">
+                                    <label>Amount</label>
+                                    <input type="text" placeholder="₹ Amount">
+                                </div>
+                            </div>
+                            <button class="search-btn">Proceed to Recharge</button>
+                        </div>
+                        
+                        <!-- FASTag Recharge -->
+                        <div class="tab-content" id="fastag-recharge">
+                            <div class="search-form">
+                                <div class="input-group">
+                                    <label>Vehicle Number</label>
+                                    <input type="text" placeholder="e.g. MH01AB1234">
+                                </div>
+                                <div class="input-group">
+                                    <label>Bank</label>
+                                    <select>
+                                        <option>Paytm Payments Bank</option>
+                                        <option>HDFC Bank</option>
+                                        <option>ICICI Bank</option>
+                                        <option>SBI</option>
+                                    </select>
+                                </div>
+                                <div class="input-group">
+                                    <label>Amount</label>
+                                    <input type="text" placeholder="₹ Amount">
+                                </div>
+                            </div>
+                            <button class="search-btn">Proceed to Recharge</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Pay Bills Section -->
+        <section class="app-section active" id="paybills-section">
+            <div class="hero-section">
+                <h1 class="hero-title">Pay your bills quickly.</h1>
+                <p class="hero-subtitle">Electricity, Credit Card, Water and more.</p>
+                
+                <div class="glass-panel">
+                    <div class="travel-tabs">
+                        <button class="tab-btn active" data-target="electricity-bill">
+                            <i class="fa-solid fa-lightbulb"></i> Electricity
+                        </button>
+                        <button class="tab-btn" data-target="creditcard-bill">
+                            <i class="fa-solid fa-credit-card"></i> Credit Card
+                        </button>
+                        <button class="tab-btn" data-target="water-bill">
+                            <i class="fa-solid fa-faucet-drip"></i> Water
+                        </button>
+                        <button class="tab-btn" data-target="municipal-bill">
+                            <i class="fa-solid fa-building-columns"></i> Municipal
+                        </button>
+                        <button class="tab-btn" data-target="gas-bill">
+                            <i class="fa-solid fa-fire-flame-simple"></i> Gas & Cylinder
+                        </button>
+                        <button class="tab-btn" data-target="challan-bill">
+                            <i class="fa-solid fa-file-invoice"></i> Challan
+                        </button>
+                    </div>
+
+                    <div class="tab-content-container">
+                        <!-- Electricity Bill -->
+                        <div class="tab-content active" id="electricity-bill">
+                            <div class="search-form">
+                                <div class="input-group">
+                                    <label>State</label>
+                                    <select>
+                                        <option>Maharashtra</option>
+                                        <option>Delhi</option>
+                                        <option>Karnataka</option>
+                                        <option>Tamil Nadu</option>
+                                    </select>
+                                </div>
+                                <div class="input-group">
+                                    <label>Electricity Board</label>
+                                    <select>
+                                        <option>MSEDCL</option>
+                                        <option>Adani Electricity</option>
+                                        <option>Tata Power</option>
+                                    </select>
+                                </div>
+                                <div class="input-group">
+                                    <label>Consumer Number</label>
+                                    <input type="text" placeholder="Enter Consumer Number">
+                                </div>
+                            </div>
+                            <button class="search-btn">Fetch Bill</button>
+                        </div>
+                        
+                        <!-- Credit Card Bill -->
+                        <div class="tab-content" id="creditcard-bill">
+                            <div class="search-form">
+                                <div class="input-group">
+                                    <label>Credit Card Number</label>
+                                    <input type="text" placeholder="Enter Card Number">
+                                </div>
+                                <div class="input-group">
+                                    <label>Bank</label>
+                                    <select>
+                                        <option>HDFC Bank</option>
+                                        <option>SBI Card</option>
+                                        <option>ICICI Bank</option>
+                                        <option>Axis Bank</option>
+                                    </select>
+                                </div>
+                                <div class="input-group">
+                                    <label>Amount</label>
+                                    <input type="text" placeholder="₹ Amount">
+                                </div>
+                            </div>
+                            <button class="search-btn">Pay Bill</button>
+                        </div>
+                        
+                        <!-- Water Bill -->
+                        <div class="tab-content" id="water-bill">
+                            <div class="search-form">
+                                <div class="input-group">
+                                    <label>Water Board</label>
+                                    <select>
+                                        <option>Delhi Jal Board</option>
+                                        <option>BMC Mumbai</option>
+                                        <option>BWSSB Bangalore</option>
+                                    </select>
+                                </div>
+                                <div class="input-group">
+                                    <label>Consumer Number</label>
+                                    <input type="text" placeholder="Enter Consumer Number">
+                                </div>
+                            </div>
+                            <button class="search-btn">Fetch Bill</button>
+                        </div>
+
+                        <!-- Municipal Bill -->
+                        <div class="tab-content" id="municipal-bill">
+                            <div class="search-form">
+                                <div class="input-group">
+                                    <label>Municipal Corporation</label>
+                                    <select>
+                                        <option>BMC Mumbai</option>
+                                        <option>Delhi Municipal Corporation</option>
+                                        <option>Pune Municipal Corporation</option>
+                                    </select>
+                                </div>
+                                <div class="input-group">
+                                    <label>Property/Consumer Number</label>
+                                    <input type="text" placeholder="Enter Property ID">
+                                </div>
+                            </div>
+                            <button class="search-btn">Fetch Bill</button>
+                        </div>
+                        
+                        <!-- Gas & Cylinder -->
+                        <div class="tab-content" id="gas-bill">
+                            <div class="search-form">
+                                <div class="input-group">
+                                    <label>Gas Provider</label>
+                                    <select>
+                                        <option>Indane Gas</option>
+                                        <option>HP Gas</option>
+                                        <option>Bharat Gas</option>
+                                        <option>Mahanagar Gas</option>
+                                    </select>
+                                </div>
+                                <div class="input-group">
+                                    <label>Consumer Number / Mobile</label>
+                                    <input type="text" placeholder="Enter Consumer No.">
+                                </div>
+                            </div>
+                            <button class="search-btn">Proceed to Pay</button>
+                        </div>
+                        
+                        <!-- Challan -->
+                        <div class="tab-content" id="challan-bill">
+                            <div class="search-form">
+                                <div class="input-group">
+                                    <label>Traffic Authority</label>
+                                    <select>
+                                        <option>Mumbai Traffic Police</option>
+                                        <option>Delhi Traffic Police</option>
+                                        <option>Bangalore Traffic Police</option>
+                                    </select>
+                                </div>
+                                <div class="input-group">
+                                    <label>Vehicle Number / Challan Number</label>
+                                    <input type="text" placeholder="Enter Vehicle/Challan No.">
+                                </div>
+                            </div>
+                            <button class="search-btn">Check Challan</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Financial Services Section -->
+        <section class="app-section" id="financial-section">
+            <div class="hero-section">
+                <h1 class="hero-title">Secure your future.</h1>
+                <p class="hero-subtitle">Premium Credit Cards and Comprehensive Insurance plans.</p>
+                
+                <div class="ad-grid">
+                    <!-- Credit Card Ad -->
+                    <div class="glass-panel ad-card">
+                        <div class="ad-content">
+                            <i class="fa-solid fa-credit-card ad-icon"></i>
+                            <h3>Paytm HDFC Credit Card</h3>
+                            <p>Up to 3% unlimited cashback every time you spend on Paytm. No hidden fees.</p>
+                            <ul class="benefits-list">
+                                <li><i class="fa-solid fa-check"></i> Zero joining fee</li>
+                                <li><i class="fa-solid fa-check"></i> Complimentary lounge access</li>
+                            </ul>
+                            <button class="search-btn">Apply Now</button>
+                        </div>
+                    </div>
+
+                    <!-- Health Insurance Ad -->
+                    <div class="glass-panel ad-card">
+                        <div class="ad-content">
+                            <i class="fa-solid fa-heart-pulse ad-icon"></i>
+                            <h3>Health Insurance</h3>
+                            <p>Cashless treatments across 5000+ hospitals. Protect your family today.</p>
+                            <ul class="benefits-list">
+                                <li><i class="fa-solid fa-check"></i> 100% claim settlement ratio</li>
+                                <li><i class="fa-solid fa-check"></i> Instant policy issuance</li>
+                            </ul>
+                            <button class="search-btn">Get Quote</button>
+                        </div>
+                    </div>
+                    
+                    <!-- Motor Insurance Ad -->
+                    <div class="glass-panel ad-card">
+                        <div class="ad-content">
+                            <i class="fa-solid fa-car-burst ad-icon"></i>
+                            <h3>Motor Insurance</h3>
+                            <p>Save up to 80% on your car or bike insurance premiums instantly.</p>
+                            <ul class="benefits-list">
+                                <li><i class="fa-solid fa-check"></i> Zero depreciation cover</li>
+                                <li><i class="fa-solid fa-check"></i> Roadside assistance 24/7</li>
+                            </ul>
+                            <button class="search-btn">Renew Now</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Payments & Services Section -->
+        <section class="app-section" id="payments-section">
+            <div class="hero-section">
+                <h1 class="hero-title">Send money instantly.</h1>
+                <p class="hero-subtitle">UPI Transfers, Wallet, and other services.</p>
+                
+                <div class="glass-panel">
+                    <div class="travel-tabs">
+                        <button class="tab-btn active" data-target="upi-transfer">
+                            <i class="fa-brands fa-google-pay"></i> UPI Transfer
+                        </button>
+                        <button class="tab-btn" data-target="wallet-transfer">
+                            <i class="fa-solid fa-wallet"></i> Wallet
+                        </button>
+                        <button class="tab-btn" data-target="bank-transfer">
+                            <i class="fa-solid fa-building-columns"></i> To Bank A/c
+                        </button>
+                    </div>
+
+                    <div class="tab-content-container">
+                        <!-- UPI Transfer -->
+                        <div class="tab-content active" id="upi-transfer">
+                            <div class="search-form">
+                                <div class="input-group">
+                                    <label>Enter UPI ID or Mobile Number</label>
+                                    <input type="text" placeholder="e.g. 9876543210@paytm">
+                                </div>
+                                <div class="input-group">
+                                    <label>Amount (₹)</label>
+                                    <input type="number" placeholder="0.00">
+                                </div>
+                            </div>
+                            <button class="search-btn">Pay Now</button>
+                        </div>
+                        
+                        <!-- Wallet Transfer -->
+                        <div class="tab-content" id="wallet-transfer">
+                            <div class="search-form">
+                                <div class="input-group">
+                                    <label>Recipient Mobile Number</label>
+                                    <input type="text" placeholder="Enter Mobile Number">
+                                </div>
+                                <div class="input-group">
+                                    <label>Amount (₹)</label>
+                                    <input type="number" placeholder="0.00">
+                                </div>
+                                <div class="input-group">
+                                    <label>Add Message (Optional)</label>
+                                    <input type="text" placeholder="What's this for?">
+                                </div>
+                            </div>
+                            <button class="search-btn">Send to Wallet</button>
+                        </div>
+
+                        <!-- Bank Transfer -->
+                        <div class="tab-content" id="bank-transfer">
+                            <div class="search-form">
+                                <div class="input-group">
+                                    <label>Enter Bank Account Number</label>
+                                    <input type="password" placeholder="Account Number">
+                                </div>
+                                <div class="input-group">
+                                    <label>IFSC Code</label>
+                                    <input type="text" placeholder="e.g. HDFC0001234">
+                                </div>
+                                <div class="input-group">
+                                    <label>Amount (₹)</label>
+                                    <input type="number" placeholder="0.00">
+                                </div>
+                            </div>
+                            <button class="search-btn">Proceed</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Scrollable Marketing Sections -->
+    <section class="marketing-block bg-light">
+        <div class="marketing-container flex-row">
+            <div class="marketing-content">
+                <h2>Paytm for Business</h2>
+                <p>Accept payments anywhere, anytime. Grow your business with our smart payment solutions like Paytm Soundbox, All-in-One QR, and EDC POS machines.</p>
+                <button class="search-btn" style="width: auto; padding: 1rem 2.5rem;">Know More</button>
+            </div>
+            <div class="marketing-image">
+                <i class="fa-solid fa-store" style="font-size: 8rem; color: var(--primary-color);"></i>
+            </div>
+        </div>
+    </section>
+
+    <section class="marketing-block bg-dark">
+        <div class="marketing-container flex-row-reverse">
+            <div class="marketing-content">
+                <h2>Wealth Management</h2>
+                <p>Invest in Mutual Funds, Stocks, and IPOs easily. Build your wealth with zero commission on direct mutual funds and intelligent portfolio tracking.</p>
+                <button class="search-btn" style="width: auto; padding: 1rem 2.5rem;">Start Investing</button>
+            </div>
+            <div class="marketing-image">
+                <i class="fa-solid fa-chart-line" style="font-size: 8rem; color: var(--accent-color);"></i>
+            </div>
+        </div>
+    </section>
+
+    <section class="marketing-block bg-light">
+        <div class="marketing-container flex-row">
+            <div class="marketing-content">
+                <h2>Paytm Postpaid & Loans</h2>
+                <p>Get instant personal loans up to ₹3 Lakhs or use Paytm Postpaid for Buy Now, Pay Later convenience at over 15 million outlets across India.</p>
+                <button class="search-btn" style="width: auto; padding: 1rem 2.5rem;">Check Eligibility</button>
+            </div>
+            <div class="marketing-image">
+                <i class="fa-solid fa-hand-holding-dollar" style="font-size: 8rem; color: #10b981;"></i>
+            </div>
+        </div>
+    </section>
+
+    <section class="marketing-block bg-dark" style="text-align: center;">
+        <div class="marketing-container">
+            <h2 style="font-size: 3rem; margin-bottom: 2rem; color: var(--text-primary);">Trusted by over 300 Million Indians</h2>
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <h3>15M+</h3>
+                    <p>Merchants</p>
+                </div>
+                <div class="stat-item">
+                    <h3>100%</h3>
+                    <p>Secure Payments</p>
+                </div>
+                <div class="stat-item">
+                    <h3>24/7</h3>
+                    <p>Customer Support</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About & Legal Section -->
+    <section class="marketing-block bg-light" style="padding: 4rem 2rem; min-height: auto; border-bottom: none;">
+        <div class="marketing-container" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 4rem; text-align: left;">
+            <div>
+                <h3 style="font-size: 1.5rem; color: var(--primary-color); margin-bottom: 1.5rem;">About Company</h3>
+                <p style="color: var(--text-secondary); line-height: 1.8; font-size: 1.1rem;">
+                    Paytm is India's leading financial services company that offers full-stack payments & financial solutions to consumers, offline merchants, and online platforms. We are on a mission to bring half a billion Indians into the mainstream economy through payments, commerce, banking, investments, and financial services.
+                </p>
+            </div>
+            <div>
+                <h3 style="font-size: 1.5rem; color: var(--primary-color); margin-bottom: 1.5rem;">Terms & Conditions</h3>
+                <ul class="legal-links" style="list-style: none; display: flex; flex-direction: column; gap: 1rem;">
+                    <li class="legal-accordion">
+                        <button class="legal-btn"><i class="fa-solid fa-angle-right"></i> Terms of Use</button>
+                        <div class="legal-content">
+                            <p>By using our services, you agree to abide by our terms of use. These terms govern your access to and use of the platform, outlining user responsibilities, permissible conduct, and the limitations of liability. Please read them carefully before conducting any transactions.</p>
+                        </div>
+                    </li>
+                    <li class="legal-accordion">
+                        <button class="legal-btn"><i class="fa-solid fa-angle-right"></i> Privacy Policy</button>
+                        <div class="legal-content">
+                            <p>We are committed to protecting your personal information. Our privacy policy details how we collect, use, and safeguard your data. We ensure strict compliance with data protection regulations and never share your sensitive information with unauthorized third parties.</p>
+                        </div>
+                    </li>
+                    <li class="legal-accordion">
+                        <button class="legal-btn"><i class="fa-solid fa-angle-right"></i> Grievance Officer</button>
+                        <div class="legal-content">
+                            <p>If you have any disputes or concerns, our dedicated Grievance Officer is available to assist you. We aim to resolve all complaints promptly and fairly within the stipulated time frame. You can reach out via the official grievance portal for immediate escalation.</p>
+                        </div>
+                    </li>
+                    <li class="legal-accordion">
+                        <button class="legal-btn"><i class="fa-solid fa-angle-right"></i> Fraud Prevention Guidelines</button>
+                        <div class="legal-content">
+                            <p>Your security is our top priority. Always ensure you are on our official platform and never share your OTP, PIN, or passwords with anyone claiming to represent us. We employ advanced AI-driven monitoring to detect and prevent fraudulent activities on your account.</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="app-footer">
+        <div class="footer-container">
+            <div class="logo">
+                <span class="paytm-text">Paytm</span>
+                <span class="travel-text">Ecosystem</span>
+            </div>
+            <p>&copy; 2026 Paytm Platform. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Sign In Modal -->
+    <div class="modal-overlay" id="signin-modal">
+        <div class="glass-panel modal-content">
+            <button class="close-modal"><i class="fa-solid fa-xmark"></i></button>
+            <h2 class="modal-title">Sign In</h2>
+            <p class="modal-subtitle">Access your bookings and saved details.</p>
+            
+            <form id="signin-form" class="search-form" style="display: flex; flex-direction: column;">
+                <div class="input-group">
+                    <label>Email / Mobile Number</label>
+                    <input type="text" id="login-id" placeholder="Enter Email or Mobile No." required>
+                </div>
+                <div class="input-group">
+                    <label>Password</label>
+                    <input type="password" id="login-pass" placeholder="Enter Password" required>
+                </div>
+                <button type="submit" class="search-btn" style="margin-top: 1rem;">Secure Sign In</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
